@@ -1,0 +1,128 @@
+[
+  {
+    "model": "api.dialog",
+    "pk": 1,
+    "fields": {
+      "name": "game start",
+      "description": "The dialog for the beginning of the game.",
+      "dialog_output": "The moment is finally here. This is where your destiny has brought you. Navigate through this labyrinth and defeat the Boss Monster or perish and sacrifice all that you hold dear. The fate of the world depends on you!"
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 2,
+    "fields": {
+      "name": "game ending",
+      "description": "The dialog for the end of a game, after defeating the boss monster.",
+      "dialog_output": "After a hard-fought battle, you defeated the Boss Monster...as you regain your composure, limping toward the exit with sustained injuries...suddenly a sinister feeling hits you. You turn towards the defeated boss monster, as it glows with a blinding blue aura...Then all of the sudden, you are struck with a beam of energy that encapsulates your entire body. You feel pain, then anger, then power...There is no one else in the room, however, you hear these words as if they are being spoken from all directions. \"YOU ARE NOW THE BOSS MONSTER!\""
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 3,
+    "fields": {
+      "name": "game over",
+      "description": "The dialog for game over!",
+      "dialog_output": "You failed us all!"
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 4,
+    "fields": {
+      "name": "move request",
+      "description": "The dialog asking where to go next.",
+      "dialog_output": "Choose a room to explore!"
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 5,
+    "fields": {
+      "name": "room empty",
+      "description": "The dialog for an empty room.",
+      "dialog_output": "Upon entering the room, you scan for anything of danger...Whew! This room is empty, take a deep breath and let's press on."
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 6,
+    "fields": {
+      "name": "room trap 1",
+      "description": "The dialog for a room with a trap.",
+      "dialog_output": "Upon entering the room, you stepped on a floor tile that seems to have triggered a trap. Doors slam down to seal all exits. A loud grinding noise from the ceiling causes you to look up. Either you are now growing taller or the ceiling is lowering to crush you...At the center of the room is two levers. You hold your breath and pull the one on the right...Your choice was correct, the trap is disarmed, and all the corridors to adjacent rooms are once again open!"
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 7,
+    "fields": {
+      "name": "room trap 2",
+      "description": "The dialog for a room with a trap.",
+      "dialog_output": "Upon entering the room, you stepped on a floor tile that seems to have triggered a trap. Doors slam down to seal all exits. The floor begins to shake, you know that something terrible is about to happen...You look up and notice that all the ceiling tiles have small holes holes in them. You notice a table in the center of the room, so you make a desperate dash for the table and slide under its surface...Within seconds, spear tips rain down from the ceiling, had you been any slower, you certainly would have been impaled...You notice on the floor tile next to you a small piece of tile raised slightly higher...You take a deep breath, and press down on it, and all the corridors to adjacent rooms are once again open!"
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 8,
+    "fields": {
+      "name": "room loot 1",
+      "description": "The dialog for a room with loot.",
+      "dialog_output": "Upon entering the room, you see notice only a small chest at its center. With extraordinary caution, you slowly walk toward it...You take a deep breath, expecting a trap of some sort, and open the chest...Nothing happens! Inside the chest is a ruby the size of an apple. If you make it out alive, you shall be rich!"
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 9,
+    "fields": {
+      "name": "room loot 2",
+      "description": "The dialog for a room with loot.",
+      "dialog_output": "Upon entering the room, you see notice only a small chest at its center. With extraordinary caution, you slowly walk toward it...You take a deep breath, expecting a trap of some sort, and open the chest...Nothing happens! Inside the chest is a dagger made in gold, studded with jewels. If you make it out alive, you shall be rich!"
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 10,
+    "fields": {
+      "name": "room monster 1",
+      "description": "The dialog for a room with a monster to battle.",
+      "dialog_output": "Upon entering the room, a monster slowly moves toward you, you draw your weapon...After a short battle, the monster is slain, it was no match for your skill. Although the monster was unable to invoke much injury upon you, a scratch on your forearm begins to tingle...You wrap your injury with a bandage and are ready to continue your journey."
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 11,
+    "fields": {
+      "name": "room monster 2",
+      "description": "he dialog for a room with a monster to battle.",
+      "dialog_output": "Upon entering the room, a monster slowly moves toward you, you draw your weapon...After a long battle, the monster is slain, it was a worthy foe. You are exhausted and the creature bit your leg during the conflict...You wrap your injury with a bandage and are ready to continue your journey."
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 12,
+    "fields": {
+      "name": "room monster 3",
+      "description": "The dialog for a room with a monster to battle.",
+      "dialog_output": "Upon entering the room, a monster slowly moves toward you, you draw your weapon...After the battle, the monster explodes and spores engulf the room...You cover your face with a cloth, hoping you didn't inhale anything toxic and are ready to continue your journey."
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 13,
+    "fields": {
+      "name": "room curio",
+      "description": "The dialog for a room with a curio.",
+      "dialog_output": "Upon entering the room, you see notice only a holy statue with a goblet and basin at its center. Inside the basin is a sparkling water that appears to be clean and pure...Your journey has been strenuous and your body throbs from injury. So you fill the goblet with the holy water and take a drink...An warm sensation spreads throughout your body and a burst energy hits you. You are ready for what lies ahead!"
+    }
+  },
+  {
+    "model": "api.dialog",
+    "pk": 14,
+    "fields": {
+      "name": "room boss",
+      "description": "The dialog for a room with the boss monster to battle.",
+      "dialog_output": "Upon entering the room, you are immediately struck with horror. At its center is the Boss Monster, twice your size, razor sharp claws, and a sinister grin appears as it surveys its latest prey..."
+    }
+  }
+]

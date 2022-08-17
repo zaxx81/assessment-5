@@ -1,0 +1,112 @@
+:root {
+  --window-bg: hsl(239, 98%, 83%);
+  --board-bg: hsl(300, 3%, 30%);
+  --dialog-bg: hsl(20, 47%, 35%);
+  --room-unknown: hsl(216, 28%, 7%);
+  --hallway-unknown: hsl(216, 28%, 14%);
+  --rpg-red: hsl(0, 95%, 22%);
+  --rpg-grey: hsl(312, 3%, 30%);
+  --rpg-gold: hsl(29, 65%, 50%);
+}
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--window-bg);
+  color: #fff;
+}
+
+.board {
+  background-color: var(--board-bg);
+  border-top: 8px ridge var(--rpg-gold);
+  border-left: 8px groove var(--rpg-gold);
+  border-right: 8px ridge var(--rpg-gold);
+  border-bottom: 8px groove var(--rpg-gold);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px 3px rgba(1, 1, 1, 0.3);
+  padding: 64px;
+}
+
+.board-row {
+  justify-content: center;
+  margin: 0;
+}
+
+.room {
+  background: var(--room-unknown);
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 128px;
+  height: 128px;
+  width: 128px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.room:focus {
+  outline: none;
+}
+
+.hallway {
+  background: var(--hallway-unknown);
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 128px;
+  height: 128px;
+  width: 128px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.hallway:focus {
+  outline: none;
+}
+
+.blank {
+  background: var(--board-bg);
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 128px;
+  height: 128px;
+  width: 128px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.blank:focus {
+  outline: none;
+}
+
+.dialog {
+  background: var(--dialog-bg);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 128px;
+  height: 128px;
+  width: 896px;
+  margin-top: 16px;
+  padding: 0;
+  text-align: center;
+  border-top: 4px ridge var(--rpg-gold);
+  border-left: 4px groove var(--rpg-gold);
+  border-right: 4px ridge var(--rpg-gold);
+  border-bottom: 4px groove var(--rpg-gold);
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 5px 3px rgba(1, 1, 1, 0.3);
+}
+
+.dialog:focus {
+  outline: none;
+}

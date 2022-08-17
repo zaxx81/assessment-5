@@ -1,0 +1,158 @@
+[
+  {
+    "model": "api.room",
+    "pk": 1,
+    "fields": {
+      "type": 4,
+      "is_visible": true,
+      "is_discovered": true,
+      "is_explored": false,
+      "is_active": false,
+      "adjacent": [1, 6, 9],
+      "dialog": 6
+    }
+  },
+  {
+    "model": "api.room",
+    "pk": 2,
+    "fields": {
+      "type": 2,
+      "is_visible": false,
+      "is_discovered": false,
+      "is_explored": false,
+      "is_active": false,
+      "adjacent": [1, 3, 6],
+      "dialog": 8
+    }
+  },
+  {
+    "model": "api.room",
+    "pk": 3,
+    "fields": {
+      "type": 5,
+      "is_visible": false,
+      "is_discovered": false,
+      "is_explored": false,
+      "is_active": false,
+      "adjacent": [2, 4],
+      "dialog": 10
+    }
+  },
+  {
+    "model": "api.room",
+    "pk": 4,
+    "fields": {
+      "type": 2,
+      "is_visible": false,
+      "is_discovered": false,
+      "is_explored": false,
+      "is_active": false,
+      "adjacent": [3, 8],
+      "dialog": 9
+    }
+  },
+  {
+    "model": "api.room",
+    "pk": 5,
+    "fields": {
+      "type": 1,
+      "is_visible": true,
+      "is_discovered": true,
+      "is_explored": true,
+      "is_active": true,
+      "adjacent": [1, 6, 9],
+      "dialog": 1
+    }
+  },
+  {
+    "model": "api.room",
+    "pk": 6,
+    "fields": {
+      "type": 4,
+      "is_visible": true,
+      "is_discovered": true,
+      "is_explored": false,
+      "is_active": false,
+      "adjacent": [2, 5],
+      "dialog": 7
+    }
+  },
+  {
+    "model": "api.room",
+    "pk": 7,
+    "fields": {
+      "type": 6,
+      "is_visible": false,
+      "is_discovered": false,
+      "is_explored": false,
+      "is_active": false,
+      "adjacent": [11],
+      "dialog": 14
+    }
+  },
+  {
+    "model": "api.room",
+    "pk": 8,
+    "fields": {
+      "type": 7,
+      "is_visible": false,
+      "is_discovered": false,
+      "is_explored": false,
+      "is_active": false,
+      "adjacent": [4, 12],
+      "dialog": 5
+    }
+  },
+  {
+    "model": "api.room",
+    "pk": 9,
+    "fields": {
+      "type": 7,
+      "is_visible": true,
+      "is_discovered": true,
+      "is_explored": false,
+      "is_active": false,
+      "adjacent": [5, 10],
+      "dialog": 5
+    }
+  },
+  {
+    "model": "api.room",
+    "pk": 10,
+    "fields": {
+      "type": 5,
+      "is_visible": false,
+      "is_discovered": false,
+      "is_explored": false,
+      "is_active": false,
+      "adjacent": [9],
+      "dialog": 11
+    }
+  },
+  {
+    "model": "api.room",
+    "pk": 11,
+    "fields": {
+      "type": 3,
+      "is_visible": false,
+      "is_discovered": false,
+      "is_explored": false,
+      "is_active": false,
+      "adjacent": [7, 12],
+      "dialog": 13
+    }
+  },
+  {
+    "model": "api.room",
+    "pk": 12,
+    "fields": {
+      "type": 5,
+      "is_visible": false,
+      "is_discovered": false,
+      "is_explored": false,
+      "is_active": false,
+      "adjacent": [8, 11],
+      "dialog": 12
+    }
+  }
+]

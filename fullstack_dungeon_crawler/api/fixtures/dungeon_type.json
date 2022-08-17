@@ -1,0 +1,65 @@
+[
+  {
+    "model": "api.type",
+    "pk": 1,
+    "fields": {
+      "name": "entrance",
+      "description": "",
+      "image": null
+    }
+  },
+  {
+    "model": "api.type",
+    "pk": 2,
+    "fields": {
+      "name": "loot",
+      "description": "",
+      "image": null
+    }
+  },
+  {
+    "model": "api.type",
+    "pk": 3,
+    "fields": {
+      "name": "curio",
+      "description": "",
+      "image": null
+    }
+  },
+  {
+    "model": "api.type",
+    "pk": 4,
+    "fields": {
+      "name": "trap",
+      "description": "",
+      "image": null
+    }
+  },
+  {
+    "model": "api.type",
+    "pk": 5,
+    "fields": {
+      "name": "monster",
+      "description": "",
+      "image": null
+    }
+  },
+  {
+    "model": "api.type",
+    "pk": 6,
+    "fields": {
+      "name": "boss",
+      "description": "",
+      "image": null
+    }
+  },
+  {
+    "model": "api.type",
+    "pk": 7,
+    "fields": {
+      "name": "empty",
+      "description": "",
+      "image": null
+    }
+  }
+]
