@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 from django.core.validators import int_list_validator
 
 
@@ -9,7 +10,6 @@ class Dialog(models.Model):
 
     def __str__(self):
         return self.name
-    
 
 
 class Character(models.Model):
@@ -41,4 +41,15 @@ class Room(models.Model):
 
     def __str__(self):
         return str(self.pk)
+
+
+class AppUser(AbstractUser):
+    email = models.EmailField(
+        verbose_name='email address',
+        max_length=255,
+        unique=True
+    )
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
     

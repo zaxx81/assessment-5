@@ -5,7 +5,7 @@ urlpatterns = [
     #================================================================#
     # HTML Routes                                                     #
     #================================================================#
-    path('', views.getRoutes, name="routes"),
+    path('', views.home, name="home"),
     
     #================================================================#
     # REST Routes (JSON)                                             #
@@ -45,5 +45,11 @@ urlpatterns = [
         'api/dialog/<int:dialog_id>',
         views.dialogDetail,
         name='dialog-detail'
-    )
+    ),
+
+    # === User Routes ===
+    path('api/signup', views.sign_up),
+    path('api/login', views.log_in),
+    path('api/logout', views.log_out),
+    path('api/whoami', views.who_am_i)
 ]
