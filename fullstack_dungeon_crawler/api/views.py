@@ -2,12 +2,10 @@ from django.shortcuts import render
 from django.core import serializers
 from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login, logout
-from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from api.models import AppUser as User
-from api.models import Room, Dialog, Character
+from .models import AppUser as User, Room, Dialog, Character
 from .serializers import RoomSerializer, DialogSerializer, CharacterSerializer
 
 
@@ -92,26 +90,14 @@ def dialogDetail(request, dialog_id):
 
 # === User Views ===
 @api_view(['POST'])
-def sign_up(request):
-    try:
-        User.objects.create_user(username=request.data['email'], password=request.data['password'], email=request.data['email'])
-    except Exception as e:
-        print(str(e))
-    return HttpResponse('hi')
-
-@api_view(['POST'])
 def log_in(request):
-    print(dir(request))
-    print(dir(request._request))
-
-    # DRF assumes that the body is JSON, and automatically parses it into a dictionary at request.data
-    email = request.data['email']
+    print('Login requested')
+    print(request.data)
+    username = request.data['username']
     password = request.data['password']
-    # user = authenticate(username=email, password=password, email=email)
-    user = authenticate(username=email, password=password)
-    print('user?')
-    print(user.email)
-    print(user.password)
+
+    user = authenticate(username=username, password=password)
+
     if user is not None:
         if user.is_active:
             try:
@@ -119,16 +105,12 @@ def log_in(request):
                 # this starts a login session for this user
                 login(request._request, user)
             except Exception as e:
-                print('except')
-                print(str(e))
-            return HttpResponse('success!')
-            # Redirect to a success page.
+                return JsonResponse({'login': e})
+            return JsonResponse({'login': 'Success'})
         else:
-            return HttpResponse('not active!')
-            # Return a 'disabled account' error message
+            return JsonResponse({'login': 'Not an active user'})
     else:
-        return HttpResponse('no user!')
-        # Return an 'invalid login' error message.
+        return JsonResponse({'login': 'No user'})
 
 
 @api_view(['POST'])
@@ -137,15 +119,13 @@ def log_out(request):
     return JsonResponse({'success':True})
 
 
-
-
 @api_view(['GET'])
 def who_am_i(request):
     # Make sure that you don't send sensitive information to the client, such as password hashes
     # raise Exception('oops')
     if request.user.is_authenticated:
-        data = serializers.serialize("json", [request.user], fields=['email', 'username'])
+        data = serializers.serialize("json", [request.user], fields=['username'])
 
         return HttpResponse(data)
     else:
-        return JsonResponse({'user':None})
+        return JsonResponse({'user': None})

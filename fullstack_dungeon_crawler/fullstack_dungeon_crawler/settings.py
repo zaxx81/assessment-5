@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'fullstack_dungeon_crawler.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'assessment_five',
+        'NAME': 'fullstack_dungeon',
         'USER': os.getenv('psql_user'),
         'PASSWORD': os.getenv('psql_pw'),
         'HOST': 'localhost',

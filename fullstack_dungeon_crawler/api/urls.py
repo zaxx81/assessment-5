@@ -13,7 +13,7 @@ urlpatterns = [
     
     # === Room Routes ===
     path(
-        'api/room/',
+        'api/dungeon/',
         views.roomList,
         name='room-list'
     ),
@@ -48,7 +48,6 @@ urlpatterns = [
     ),
 
     # === User Routes ===
-    path('api/signup', views.sign_up),
     path('api/login', views.log_in),
     path('api/logout', views.log_out),
     path('api/whoami', views.who_am_i)

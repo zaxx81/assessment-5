@@ -1,19 +1,21 @@
-import { useState } from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./assets/App.css";
-import Header from "./layouts/Navbar";
-import Board from "./components/board/Board";
-import useGetMonster from "./hooks/useGetMonster";
-import getCSRFToken from "./utils/getCSRFToken";
-import axios from "axios";
+import Homepage from "./pages/homepage";
+import Login from "./pages/login";
+import Logout from "./pages/logout";
+import Dungeon from "./pages/dungeon";
 
 function App() {
-  // axios.defaults.headers.common["X-CSRFToken"] = getCSRFToken();
-  // useGetMonster();
-
   return (
     <div className="App">
-      <Header />
-      <Board />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/dungeon" element={<Dungeon />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -2,6 +2,8 @@
   --window-bg: hsl(239, 98%, 83%);
   --board-bg: hsl(300, 3%, 30%);
   --dialog-bg: hsl(20, 47%, 35%);
+  --room-active: hsl(216, 84%, 20%);
+  --room-visible: hsl(216, 85%, 44%);
   --room-unknown: hsl(216, 28%, 7%);
   --hallway-unknown: hsl(216, 28%, 14%);
   --rpg-red: hsl(0, 95%, 22%);
@@ -39,7 +41,6 @@ body {
 }
 
 .room {
-  background: var(--room-unknown);
   border: 1px solid #999;
   font-size: 24px;
   font-weight: bold;
@@ -53,6 +54,18 @@ body {
 
 .room:focus {
   outline: none;
+}
+
+.room--unknown {
+  background: var(--room-unknown);
+}
+
+.room--active {
+  background: var(--room-active);
+}
+
+.room--visible {
+  background: var(--room-visible);
 }
 
 .hallway {
