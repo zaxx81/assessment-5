@@ -10,12 +10,17 @@ axios.defaults.headers.common["X-CSRFToken"] = getCSRFToken();
 function Homepage() {
   const [user, setUser] = useState(null);
   const [showPlayLink, setShowPlayLink] = useState(false);
+  const [showLoginError, setShowLoginError] = useState(false);
 
   const whoAmI = async () => {
     const response = await axios.get("/api/whoami");
     const user = response.data && response.data[0] && response.data[0].fields;
     console.log("user from whoami? ", user, response);
-    setUser(user);
+    if (user != undefined) {
+      setUser(user);
+      setShowPlayLink(true);
+      setShowLoginError(false);
+    }
   };
 
   const submitLoginForm = function (event) {
@@ -26,7 +31,8 @@ function Homepage() {
     axios
       .post("/api/login", { username: username, password: password })
       .then((response) => {
-        setShowPlayLink(true);
+        if (response.data["login"] == "Success") setShowPlayLink(true);
+        else setShowLoginError(true);
       })
       .catch((error) => {
         console.log("There was an error logging in: ", error);
@@ -40,10 +46,18 @@ function Homepage() {
   return (
     <div>
       <Header user={user} />
-      {/* <LoginForm handleLogin={submitLoginForm} /> */}
-      <button>
-        <Link to="/dungeon/">Enter the Dungeon!</Link>
-      </button>
+      {showPlayLink ? (
+        <button>
+          <Link to="/dungeon/">Enter the Dungeon!</Link>
+        </button>
+      ) : (
+        <LoginForm handleLogin={submitLoginForm} />
+      )}
+      {showLoginError ? (
+        <p>There was an error logging in. Please try again!</p>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

@@ -26,7 +26,7 @@ def home(request):
 def roomList(request):
     rooms = Room.objects.all().order_by('id')
     serializer = RoomSerializer(rooms, many=True)
-
+    print(f'Requesting user...{request.user.username}')
     return JsonResponse(serializer.data, safe=False, status=200)
 
 

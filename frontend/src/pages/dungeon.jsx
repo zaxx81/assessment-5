@@ -1,24 +1,20 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 
 import Header from "../layouts/Navbar";
 import Board from "../components/board/Board";
-import useGetDungeon from "../hooks/useGetDungeon";
+import initialDungeon from "../data/dungeon_initial.json";
 
 function Dungeon() {
-  const [isLoading, setIsLoading] = useState(true);
-  const dungeon = useGetDungeon();
+  const [dungeon, setDungeon] = useState(initialDungeon);
 
   useEffect(() => {
-    if (dungeon.length > 0) {
-      setIsLoading(false);
-    }
+    console.log(dungeon);
   }, [dungeon]);
 
   return (
     <div>
       <Header />
-      {isLoading ? console.log("loading...") : <Board dungeon={dungeon} />}
+      <Board dungeon={dungeon} />
     </div>
   );
 }

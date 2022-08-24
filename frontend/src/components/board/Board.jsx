@@ -1,73 +1,65 @@
-import Room from "../room/Room";
-import Hallway from "../hallway/Hallway";
-import Blank from "../empty/Blank";
+import Tile from "../tile/Tile";
 import Dialog from "../dialog/Dialog";
 
 function Board(props) {
-  const renderRoom = (i) => {
-    return <Room dungeon_room={props.dungeon[i]} />;
-  };
-
-  const renderHallway = (i) => {
-    return <Hallway />;
-  };
-
-  const renderBlank = (i) => {
-    return <Blank />;
+  const renderTile = (i) => {
+    return <Tile tile={props.dungeon[i - 1]} />;
   };
 
   const renderDialog = (i) => {
-    return <Dialog />;
+    return <Dialog dialog={i} />;
   };
 
   return (
     <div className="board container align-items-center">
       <div className="board-row row">
-        {renderRoom(0)}
-        {renderHallway()}
-        {renderRoom(1)}
-        {renderHallway()}
-        {renderRoom(2)}
-        {renderHallway()}
-        {renderRoom(3)}
+        {renderTile(1)}
+        {renderTile(2)}
+        {renderTile(3)}
+        {renderTile(4)}
+        {renderTile(5)}
+        {renderTile(6)}
+        {renderTile(7)}
       </div>
       <div className="board-row row">
-        {renderHallway()}
-        {renderBlank()}
-        {renderHallway()}
-        {renderBlank()}
-        {renderHallway()}
-        {renderBlank()}
-        {renderHallway()}
+        {renderTile(8)}
+        {renderTile(9)}
+        {renderTile(10)}
+        {renderTile(11)}
+        {renderTile(12)}
+        {renderTile(13)}
+        {renderTile(14)}
       </div>
       <div className="board-row row">
-        {renderRoom(4)}
-        {renderHallway()}
-        {renderRoom(5)}
-        {renderHallway()}
-        {renderRoom(6)}
-        {renderHallway()}
-        {renderRoom(7)}
+        {renderTile(15)}
+        {renderTile(16)}
+        {renderTile(17)}
+        {renderTile(18)}
+        {renderTile(19)}
+        {renderTile(20)}
+        {renderTile(21)}
       </div>
       <div className="board-row row">
-        {renderHallway()}
-        {renderBlank()}
-        {renderHallway()}
-        {renderBlank()}
-        {renderHallway()}
-        {renderBlank()}
-        {renderHallway()}
+        {renderTile(22)}
+        {renderTile(23)}
+        {renderTile(24)}
+        {renderTile(25)}
+        {renderTile(26)}
+        {renderTile(27)}
+        {renderTile(28)}
       </div>
       <div className="board-row row">
-        {renderRoom(8)}
-        {renderHallway()}
-        {renderRoom(9)}
-        {renderHallway()}
-        {renderRoom(10)}
-        {renderHallway()}
-        {renderRoom(11)}
+        {renderTile(29)}
+        {renderTile(30)}
+        {renderTile(31)}
+        {renderTile(32)}
+        {renderTile(33)}
+        {renderTile(34)}
+        {renderTile(35)}
       </div>
-      <div className="board-row row">{renderDialog("My Dialog Box")}</div>
+      <div className="board-row row">
+        {renderDialog("Select a room to explore!")}
+      </div>
     </div>
   );
 }

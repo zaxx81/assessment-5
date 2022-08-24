@@ -45,11 +45,7 @@ class Room(models.Model):
 
 class AppUser(AbstractUser):
     username = models.CharField(max_length = 50, blank = True, null = True, unique = True)
-    # email = models.EmailField(
-    #     verbose_name='email address',
-    #     max_length=255,
-    #     unique=True,
-    # )
+    
     is_superuser = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'username'

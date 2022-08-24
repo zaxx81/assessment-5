@@ -40,71 +40,9 @@ body {
   margin: 0;
 }
 
-.room {
-  border: 1px solid #999;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 128px;
-  height: 128px;
-  width: 128px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.room:focus {
-  outline: none;
-}
-
-.room--unknown {
-  background: var(--room-unknown);
-}
-
-.room--active {
-  background: var(--room-active);
-}
-
-.room--visible {
-  background: var(--room-visible);
-}
-
-.hallway {
-  background: var(--hallway-unknown);
-  border: 1px solid #999;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 128px;
-  height: 128px;
-  width: 128px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.hallway:focus {
-  outline: none;
-}
-
-.blank {
-  background: var(--board-bg);
-  border: 1px solid #999;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 128px;
-  height: 128px;
-  width: 128px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.blank:focus {
-  outline: none;
-}
-
 .dialog {
   background: var(--dialog-bg);
-  font-size: 14px;
+  font-size: 36px;
   font-weight: bold;
   line-height: 128px;
   height: 128px;
