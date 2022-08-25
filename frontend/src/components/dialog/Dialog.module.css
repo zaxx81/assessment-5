@@ -1,0 +1,28 @@
+@import url(../../assets/App.css);
+
+.dialog {
+  color: var(--rpg-gold);
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.dialogBox {
+  color: white;
+  background: hsl(20, 47%, 35%);
+  line-height: 128px;
+  height: 128px;
+  width: 896px;
+  padding: 0;
+  text-align: center;
+  border-top: 4px ridge var(--rpg-gold);
+  border-left: 4px groove var(--rpg-gold);
+  border-right: 4px ridge var(--rpg-gold);
+  border-bottom: 4px groove var(--rpg-gold);
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 5px 3px rgba(1, 1, 1, 0.3);
+}
+
+.dialogBox:focus {
+  outline: none;
+}

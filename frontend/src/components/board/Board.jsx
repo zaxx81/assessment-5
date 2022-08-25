@@ -1,13 +1,9 @@
+import classes from "./Board.module.css";
 import Tile from "../tile/Tile";
-import Dialog from "../dialog/Dialog";
 
 function Board(props) {
   const renderTile = (i) => {
     return <Tile tile={props.dungeon[i - 1]} moveHero={moveHero} />;
-  };
-
-  const renderDialog = (i) => {
-    return <Dialog dialog={i} />;
   };
 
   function moveHero() {
@@ -15,8 +11,8 @@ function Board(props) {
   }
 
   return (
-    <div className="board container align-items-center">
-      <div className="board-row row">
+    <div className={`${classes.board} container align-items-center`}>
+      <div className={`${classes.boardRow} row`}>
         {renderTile(1)}
         {renderTile(2)}
         {renderTile(3)}
@@ -25,7 +21,7 @@ function Board(props) {
         {renderTile(6)}
         {renderTile(7)}
       </div>
-      <div className="board-row row">
+      <div className={`${classes.boardRow} row`}>
         {renderTile(8)}
         {renderTile(9)}
         {renderTile(10)}
@@ -34,7 +30,7 @@ function Board(props) {
         {renderTile(13)}
         {renderTile(14)}
       </div>
-      <div className="board-row row">
+      <div className={`${classes.boardRow} row`}>
         {renderTile(15)}
         {renderTile(16)}
         {renderTile(17)}
@@ -43,7 +39,7 @@ function Board(props) {
         {renderTile(20)}
         {renderTile(21)}
       </div>
-      <div className="board-row row">
+      <div className={`${classes.boardRow} row`}>
         {renderTile(22)}
         {renderTile(23)}
         {renderTile(24)}
@@ -52,7 +48,7 @@ function Board(props) {
         {renderTile(27)}
         {renderTile(28)}
       </div>
-      <div className="board-row row">
+      <div className={`${classes.boardRow} row`}>
         {renderTile(29)}
         {renderTile(30)}
         {renderTile(31)}
@@ -60,9 +56,6 @@ function Board(props) {
         {renderTile(33)}
         {renderTile(34)}
         {renderTile(35)}
-      </div>
-      <div className="board-row row">
-        {renderDialog("Select a room to explore!")}
       </div>
     </div>
   );
