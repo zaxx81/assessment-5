@@ -3,12 +3,16 @@ import Dialog from "../dialog/Dialog";
 
 function Board(props) {
   const renderTile = (i) => {
-    return <Tile tile={props.dungeon[i - 1]} />;
+    return <Tile tile={props.dungeon[i - 1]} moveHero={moveHero} />;
   };
 
   const renderDialog = (i) => {
     return <Dialog dialog={i} />;
   };
+
+  function moveHero() {
+    console.log("You Clicked Successfully!");
+  }
 
   return (
     <div className="board container align-items-center">

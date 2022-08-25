@@ -4,7 +4,7 @@ import Header from "../layouts/Navbar";
 import Board from "../components/board/Board";
 import initialDungeon from "../data/dungeon_initial.json";
 
-function Dungeon() {
+function Dungeon(props) {
   const [dungeon, setDungeon] = useState(initialDungeon);
 
   useEffect(() => {

@@ -6,9 +6,9 @@ function Tile(props) {
   const isActive = props.tile["isActive"];
   const isSelectable = props.tile["isSelectable"];
   const isComplete = props.tile["isComplete"];
+  const moveHero = props.moveHero;
 
   let cssClasses = classes.tile;
-  let onClick = "";
   let value = "";
 
   !isVisible
@@ -29,7 +29,7 @@ function Tile(props) {
   }
 
   return (
-    <div className={cssClasses} onClick={onClick}>
+    <div className={cssClasses} onClick={isSelectable ? moveHero : null}>
       {value}
     </div>
   );
