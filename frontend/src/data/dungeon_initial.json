@@ -8,8 +8,7 @@
     "isMasked": true,
     "adjacentRooms": [3, 15],
     "adjacentTiles": [2, 8, 9],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": "This is a test...well done!"
   },
   {
     "tile": 2,
@@ -20,8 +19,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 3,
@@ -30,10 +28,9 @@
     "isActive": false,
     "isSelectable": false,
     "isMasked": true,
-    "adjacentRooms": [1, 5],
+    "adjacentRooms": [1, 5, 17],
     "adjacentTiles": [2, 4, 9, 10, 11],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 4,
@@ -44,8 +41,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 5,
@@ -56,8 +52,7 @@
     "isMasked": true,
     "adjacentRooms": [3, 7],
     "adjacentTiles": [4, 6, 11, 12, 13],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 6,
@@ -68,8 +63,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 7,
@@ -80,8 +74,7 @@
     "isMasked": true,
     "adjacentRooms": [5, 21],
     "adjacentTiles": [6, 13, 14],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 8,
@@ -92,8 +85,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 9,
@@ -104,8 +96,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 10,
@@ -116,8 +107,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 11,
@@ -128,8 +118,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 12,
@@ -140,8 +129,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 13,
@@ -152,8 +140,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 14,
@@ -164,8 +151,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 15,
@@ -176,8 +162,7 @@
     "isMasked": false,
     "adjacentRooms": [1, 17, 29],
     "adjacentTiles": [8, 9, 16, 22, 23],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 16,
@@ -188,8 +173,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 17,
@@ -200,8 +184,7 @@
     "isMasked": true,
     "adjacentRooms": [3, 15],
     "adjacentTiles": [9, 10, 11, 16, 18, 23, 24, 25],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 18,
@@ -212,8 +195,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 19,
@@ -224,8 +206,7 @@
     "isMasked": true,
     "adjacentRooms": [33],
     "adjacentTiles": [11, 12, 13, 18, 20, 25, 26, 27],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 20,
@@ -236,8 +217,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 21,
@@ -248,8 +228,7 @@
     "isMasked": true,
     "adjacentRooms": [7, 35],
     "adjacentTiles": [13, 14, 20, 27, 28],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 22,
@@ -260,8 +239,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 23,
@@ -272,8 +250,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 24,
@@ -284,8 +261,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 25,
@@ -296,8 +272,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 26,
@@ -308,8 +283,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 27,
@@ -320,8 +294,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 28,
@@ -332,8 +305,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 29,
@@ -344,8 +316,7 @@
     "isMasked": true,
     "adjacentRooms": [15, 31],
     "adjacentTiles": [22, 23, 30],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 30,
@@ -356,8 +327,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 31,
@@ -368,8 +338,7 @@
     "isMasked": true,
     "adjacentRooms": [29],
     "adjacentTiles": [23, 24, 25, 30, 32],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 32,
@@ -380,8 +349,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 33,
@@ -392,8 +360,7 @@
     "isMasked": true,
     "adjacentRooms": [19, 35],
     "adjacentTiles": [25, 26, 27, 32, 34],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 34,
@@ -404,8 +371,7 @@
     "isMasked": false,
     "adjacentRooms": [],
     "adjacentTiles": [],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   },
   {
     "tile": 35,
@@ -416,7 +382,6 @@
     "isMasked": true,
     "adjacentRooms": [21, 33],
     "adjacentTiles": [27, 28, 34],
-    "dialog_entry": "",
-    "dialog_complete": ""
+    "dialogNode": ""
   }
 ]

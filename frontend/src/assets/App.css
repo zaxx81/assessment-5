@@ -1,5 +1,6 @@
 :root {
-  --window-bg: hsl(239, 98%, 83%);
+  /* --window-bg: hsl(239, 98%, 83%); */
+  --window-bg: hsl(312, 3%, 30%);
   --rpg-red: hsl(0, 95%, 22%);
   --rpg-grey: hsl(312, 3%, 30%);
   --rpg-gold: hsl(29, 65%, 50%);

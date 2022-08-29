@@ -1,7 +1,7 @@
 @import url(../../assets/App.css);
 
 .dialog {
-  color: var(--rpg-gold);
+  color: white;
   font-size: 36px;
   font-weight: bold;
   margin-top: 16px;

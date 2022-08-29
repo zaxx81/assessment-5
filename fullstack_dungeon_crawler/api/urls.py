@@ -11,31 +11,7 @@ urlpatterns = [
     # REST Routes (JSON)                                             #
     #================================================================#
     
-    # === Room Routes ===
-    path(
-        'api/dungeon/',
-        views.roomList,
-        name='room-list'
-    ),
-    path(
-        'api/room/<int:room_id>',
-        views.roomDetail,
-        name='room-detail'
-    ),
-    
-    # === Character Routes ===
-    path(
-        'api/character/',
-        views.characterList,
-        name='character-list'
-    ),
-    path(
-        'api/character/<int:character_id>',
-        views.characterDetail,
-        name='character-detail'
-    ),
-    
-    # === Model Routes ===
+    # === Dialog Routes ===
     path(
         'api/dialog/',
         views.dialogList,
@@ -48,7 +24,8 @@ urlpatterns = [
     ),
 
     # === User Routes ===
-    path('api/login', views.log_in),
-    path('api/logout', views.log_out),
-    path('api/whoami', views.who_am_i)
+    path('api/login', views.login, name='login'),
+    path('api/logout', views.logout, name='logout'),
+    path('api/whoami', views.who_am_i, name='who_am_i'),
+    path('api/save', views.save, name='save')
 ]

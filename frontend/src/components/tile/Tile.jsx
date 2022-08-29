@@ -1,13 +1,15 @@
+import { useRef } from "react";
 import classes from "./Tile.module.css";
 import "../../../node_modules/rpg-awesome/css/rpg-awesome.min.css";
 
-function Tile(props) {
-  const type = props.tile["type"];
-  const isVisible = props.tile["isVisible"];
-  const isMasked = props.tile["isMasked"];
-  const isActive = props.tile["isActive"];
-  const isSelectable = props.tile["isSelectable"];
-  const moveHero = props.moveHero;
+function Tile({ tile, onMoveHero }) {
+  const type = tile["type"];
+  const tileId = tile["tile"];
+  const isVisible = tile["isVisible"];
+  const isMasked = tile["isMasked"];
+  const isActive = tile["isActive"];
+  const isSelectable = tile["isSelectable"];
+  const roomID = useRef(tileId);
 
   let cssClasses = classes.tile;
   let value = "";
@@ -30,7 +32,11 @@ function Tile(props) {
   if (isVisible && isMasked) value = "ra ra-uncertainty";
 
   return (
-    <div className={cssClasses} onClick={isSelectable ? moveHero : null}>
+    <div
+      id={tileId}
+      className={cssClasses}
+      onClick={() => onMoveHero(roomID.current)}
+    >
       <i className={value}></i>
     </div>
   );

@@ -5,8 +5,13 @@ import Board from "../components/board/Board";
 import Dialog from "../components/dialog/Dialog";
 import initialDungeon from "../data/dungeon_initial.json";
 
-function Dungeon(props) {
+function Dungeon({ user }) {
+  const [showMapView, setShowMapView] = useState(true);
+  const [dialog, setDialog] = useState("");
   const [dungeon, setDungeon] = useState(initialDungeon);
+  const [heroLocation, setHeroLocation] = useState(15);
+  const [explorableRooms, setExplorableRooms] = useState([1, 17, 29]);
+  const [completedRooms, setCompletedRooms] = useState([]);
 
   useEffect(() => {
     console.log(dungeon);
@@ -15,8 +20,23 @@ function Dungeon(props) {
   return (
     <div>
       <Header />
-      <Board dungeon={dungeon} />
-      <Dialog dialog={"Select a room to explore!"} />
+      {showMapView ? (
+        <Board
+          user={user}
+          dungeon={dungeon}
+          setDungeon={setDungeon}
+          setShowMapView={setShowMapView}
+          setDialog={setDialog}
+          heroLocation={heroLocation}
+          setHeroLocation={setHeroLocation}
+          explorableRooms={explorableRooms}
+          setExplorableRooms={setExplorableRooms}
+          completedRooms={completedRooms}
+          setCompletedRooms={setCompletedRooms}
+        />
+      ) : (
+        <Dialog dialog={dialog} setShowMapView={setShowMapView} />
+      )}
     </div>
   );
 }

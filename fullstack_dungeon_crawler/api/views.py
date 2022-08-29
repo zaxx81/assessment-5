@@ -5,8 +5,8 @@ from django.contrib.auth import authenticate, login, logout
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .models import AppUser as User, Room, Dialog, Character
-from .serializers import RoomSerializer, DialogSerializer, CharacterSerializer
+from .models import AppUser as User, Dialog
+from .serializers import DialogSerializer, DungeonSerializer
 
 
 #================================================================#
@@ -20,56 +20,6 @@ def home(request):
 #================================================================#
 # REST Views                                                     #
 #================================================================#
-
-# === Room Views ===
-@api_view(['GET'])
-def roomList(request):
-    rooms = Room.objects.all().order_by('id')
-    serializer = RoomSerializer(rooms, many=True)
-    print(f'Requesting user...{request.user.username}')
-    return JsonResponse(serializer.data, safe=False, status=200)
-
-
-@api_view(['GET', 'PUT'])
-def roomDetail(request, room_id):
-    if request.method == 'GET':
-        room = Room.objects.get(id=room_id)
-        serializer = RoomSerializer(room, many=False)
-
-    if request.method == 'PUT':
-        room = Room.objects.get(id=room_id)
-        serializer = RoomSerializer(instance=room, data=request.data, many=False)
-
-        if serializer.is_valid():
-            serializer.save()
-
-    return JsonResponse(serializer.data, safe=False, status=200)
-
-
-# === Character Views ===
-@api_view(['GET'])
-def characterList(request):
-    character = Character.objects.all().order_by('id')
-    serializer = CharacterSerializer(character, many=True)
-
-    return JsonResponse(serializer.data, safe=False, status=200)
-
-
-@api_view(['GET', 'PUT'])
-def characterDetail(request, character_id):
-    if request.method == 'GET':
-        character = Character.objects.get(id=character_id)
-        serializer = CharacterSerializer(character, many=False)
-
-    if request.method == 'PUT':
-        character = Character.objects.get(id=character_id)
-        serializer = CharacterSerializer(instance=character, data=request.data, many=False)
-
-        if serializer.is_valid():
-            serializer.save()
-
-    return JsonResponse(serializer.data, safe=False, status=200)
-
 
 # === Dialog Views ===
 @api_view(['GET'])
@@ -89,8 +39,26 @@ def dialogDetail(request, dialog_id):
 
 
 # === User Views ===
+@api_view(['GET', 'PUT'])
+def save(request):
+    if request.method == 'GET':
+        if request.user.is_authenticated:
+            user = User.objects.get(username=request.user)
+            dungeon = user.dungeon
+            return JsonResponse(dungeon, safe=False)
+    
+    if request.method == 'PUT':
+        if request.user.is_authenticated:
+            user = User.objects.get(username=request.user)
+            user.dungeon = request.data
+            user.save()
+        return JsonResponse({'result': 'game saved'})
+    
+    return JsonResponse({'dungeon': None})
+
+
 @api_view(['POST'])
-def log_in(request):
+def login(request):
     print('Login requested')
     print(request.data)
     username = request.data['username']
@@ -114,7 +82,7 @@ def log_in(request):
 
 
 @api_view(['POST'])
-def log_out(request):
+def logout(request):
     logout(request)
     return JsonResponse({'success':True})
 

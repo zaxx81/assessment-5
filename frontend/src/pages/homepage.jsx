@@ -48,7 +48,9 @@ function Homepage() {
       <Header user={user} />
       {showPlayLink ? (
         <button>
-          <Link to="/dungeon/">Enter the Dungeon!</Link>
+          <Link to="/dungeon/" user={user}>
+            Enter the Dungeon!
+          </Link>
         </button>
       ) : (
         <LoginForm handleLogin={submitLoginForm} />
