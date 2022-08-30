@@ -27,5 +27,8 @@ urlpatterns = [
     path('api/login', views.login, name='login'),
     path('api/logout', views.logout, name='logout'),
     path('api/whoami', views.who_am_i, name='who_am_i'),
-    path('api/save', views.save, name='save')
+    path('api/save', views.save, name='save'),
+
+    # === Fetch Routes ===
+    path('fetch/monster', views.fetchMonster, name='fetchMonster')
 ]

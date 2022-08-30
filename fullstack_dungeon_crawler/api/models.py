@@ -7,7 +7,6 @@ class AppUser(AbstractUser):
     username = models.CharField(max_length = 50, blank = True, null = True, unique = True)
     
     is_superuser = models.BooleanField(default=False)
-    dungeon = models.JSONField(default={"test": "123"})
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []
@@ -15,9 +14,17 @@ class AppUser(AbstractUser):
 
 class Dialog(models.Model):
     name = models.CharField(max_length=100)
-    description = models.TextField(max_length=500)
-    dialog_output = models.TextField(max_length=1500)
+    icon = models.TextField(max_length=500)
+    dialog = models.TextField(max_length=1500)
 
     def __str__(self):
         return self.name
-    
+
+
+class Monster(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.TextField(max_length=500)
+    description = models.TextField(max_length=1500)
+
+    def __str__(self):
+        return self.name

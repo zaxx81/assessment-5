@@ -4,6 +4,7 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+import requests
 
 from .models import AppUser as User, Dialog
 from .serializers import DialogSerializer, DungeonSerializer
@@ -36,6 +37,18 @@ def dialogDetail(request, dialog_id):
     serializer = DialogSerializer(dialog, many=False)
 
     return JsonResponse(serializer.data, safe=False, status=200)
+
+
+@api_view(['GET'])
+def fetchMonster(request):
+    endpoint = 'https://app.pixelencounter.com/api/basic/svgmonsters'
+
+    API_response = requests.get(endpoint)
+    data = str(API_response.content, 'utf-8')
+        
+    data = data.replace("xmlns:xlink", "xmlnsXlink")
+    
+    return HttpResponse(data)
 
 
 # === User Views ===

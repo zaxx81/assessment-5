@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import classes from "./Board.module.css";
 import Tile from "../tile/Tile";
-import saveDungeon from "../../utils/saveDungeon";
 
 function Board({
   user,
@@ -78,7 +77,6 @@ function Board({
     console.log(`Current location of hero: ${heroLocation}`);
     console.log(`Rooms available to explore: ${explorableRooms}`);
     console.log(`Rooms that have been completed: ${completedRooms}`);
-    saveDungeon(user, dungeon);
   }, [dungeon]);
 
   return (
