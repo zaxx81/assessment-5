@@ -30,5 +30,5 @@ urlpatterns = [
     path('api/save', views.save, name='save'),
 
     # === Fetch Routes ===
-    path('fetch/monster', views.fetchMonster, name='fetchMonster')
+    path('fetch/monsters', views.fetchMonsters, name='fetchMonsters')
 ]

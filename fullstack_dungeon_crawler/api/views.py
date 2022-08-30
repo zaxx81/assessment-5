@@ -6,8 +6,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import requests
 
-from .models import AppUser as User, Dialog
-from .serializers import DialogSerializer, DungeonSerializer
+from .models import AppUser as User, Dialog, Monster
+from .serializers import DialogSerializer, DungeonSerializer, MonsterSerializer
 
 
 #================================================================#
@@ -38,17 +38,61 @@ def dialogDetail(request, dialog_id):
 
     return JsonResponse(serializer.data, safe=False, status=200)
 
-
+# === Monster Views ===
 @api_view(['GET'])
-def fetchMonster(request):
-    endpoint = 'https://app.pixelencounter.com/api/basic/svgmonsters'
+def fetchMonsters(request):
+    monsters = []
 
-    API_response = requests.get(endpoint)
-    data = str(API_response.content, 'utf-8')
-        
-    data = data.replace("xmlns:xlink", "xmlnsXlink")
+    if(Monster.objects.count == 0):
+        monsterSVG = []
+        endpoint = 'https://app.pixelencounter.com/api/basic/svgmonsters'
+
+        def getSVG():
+            API_response = requests.get(endpoint)
+            svg = str(API_response.content, 'utf-8')
+            
+            svg = svg.replace("xmlns:xlink", "xmlnsXlink")
+            monsterSVG.append(svg)
+
+        for _ in range(4):
+            getSVG()
+
+        monsters.append({
+            'name': 'Evil Orc',
+            'image': monsterSVG[0],
+            'description': 'A brutish, aggressive, ugly, and malevolent race of monsters, contrasting with the benevolent Elves and serving an evil power, though they share a human sense of morality.'
+        })
+
+        monsters.append({
+            'name': 'Dungeon Troll',
+            'image': monsterSVG[1],
+            'description': 'A monstrously large humanoid of great strength and poor intellect.'
+        })
+
+        monsters.append({
+            'name': 'Undead Warrior',
+            'image': monsterSVG[2],
+            'description':'A skeleton soldier of the undead. Cursed by some unknown source of Hades.'
+        })
+
+        monsters.append({
+            'name': 'The Frost Dragon',
+            'image': monsterSVG[3],
+            'description': 'A mighty and monstrous dragon with teeth as sharp as swords and breath of ice!'
+        })
+
+        for monster in monsters:
+            monster = Monster.objects.create(
+                name = monster['name'],
+                image = monster['image'],
+                description = monster['description']
+            )
+
+    monster = Monster.objects.all().order_by('id')
+    serializer = MonsterSerializer(monster, many=True)
     
-    return HttpResponse(data)
+
+    return JsonResponse(serializer.data, safe=False, status=200)
 
 
 # === User Views ===

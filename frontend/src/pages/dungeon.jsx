@@ -4,12 +4,13 @@ import Header from "../layouts/Navbar";
 import Board from "../components/board/Board";
 import Dialog from "../components/dialog/Dialog";
 import initialDungeon from "../data/dungeon_initial.json";
+import useGetMonsters from "../hooks/useGetMonsters";
 
 function Dungeon({ user }) {
   const [showMapView, setShowMapView] = useState(true);
   const [dialog, setDialog] = useState("");
   const [dungeon, setDungeon] = useState(initialDungeon);
-  const [monsters, setMonsters] = useState([]);
+  const { monsters, monstersError } = useGetMonsters();
   const [heroLocation, setHeroLocation] = useState(15);
   const [explorableRooms, setExplorableRooms] = useState([1, 17, 29]);
   const [completedRooms, setCompletedRooms] = useState([]);
@@ -17,8 +18,6 @@ function Dungeon({ user }) {
   useEffect(() => {
     console.log(dungeon);
   }, [dungeon]);
-
-  useEffect(() => {}, []);
 
   return (
     <div>
@@ -38,7 +37,11 @@ function Dungeon({ user }) {
           setCompletedRooms={setCompletedRooms}
         />
       ) : (
-        <Dialog dialog={dialog} setShowMapView={setShowMapView} />
+        <Dialog
+          dialog={dialog}
+          setShowMapView={setShowMapView}
+          monsters={monsters}
+        />
       )}
     </div>
   );
