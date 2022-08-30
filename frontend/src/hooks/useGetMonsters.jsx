@@ -9,10 +9,10 @@ const useGetMonsters = () => {
     const getData = async () => {
       try {
         const response = await axios.get("/fetch/monsters");
+        // console.log(response.data);
         setData(response.data);
         setError(null);
         console.log("Successfully fetched monsters...");
-        console.log(data);
       } catch (error) {
         setError(error.message);
         setData([]);
@@ -20,6 +20,13 @@ const useGetMonsters = () => {
     };
     getData();
   }, []);
+
+  useEffect(() => {
+    console.log(`Data Changed`);
+    data.forEach((monster) => {
+      console.log(monster);
+    });
+  }, [data]);
 
   return { data, error };
 };

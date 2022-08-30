@@ -19,6 +19,11 @@ function Dungeon({ user }) {
     console.log(dungeon);
   }, [dungeon]);
 
+  useEffect(() => {
+    console.log("Use Effect:");
+    console.log(monsters);
+  }, [monsters]);
+
   return (
     <div>
       <Header />

@@ -2,7 +2,7 @@ import classes from "./Dialog.module.css";
 import Button from "../../../node_modules/react-bootstrap/Button";
 
 function Dialog({ dialog, setShowMapView, monsters }) {
-  console.log(monsters);
+  // console.log(monsters);
   return (
     <>
       <div>
